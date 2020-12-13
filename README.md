@@ -15,9 +15,16 @@ $ yarn dev
 # Start Storybook
 $ yarn storybook
 ```
+### Storybook
+```bash
+# Build Storybook
+$ yarn build-storybook
 
+# Start Storybook
+$ yarn storybook
+```
 ### Build Production
 ```bash
-# Start aplication
+# Build command
 $ yarn build
 ```
