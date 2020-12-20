@@ -2411,9 +2411,9 @@ camelize@^1.0.0:
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
 caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001165:
-  version "1.0.30001168"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001168.tgz#6fcd098c139d003b9bd484cbb9ca26cb89907f9a"
-  integrity sha512-P2zmX7swIXKu+GMMR01TWa4csIKELTNnZKc+f1CjebmZJQtTAEXmpQSoKVJVVcvPGAA0TEYTOUp3VehavZSFPQ==
+  version "1.0.30001170"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001170.tgz#0088bfecc6a14694969e391cc29d7eb6362ca6a7"
+  integrity sha512-Dd4d/+0tsK0UNLrZs3CvNukqalnVTRrxb5mcQm8rHL49t7V5ZaTygwXkrq+FB+dVDf++4ri8eJnFEJAB8332PA==
 
 captains-log@^2.0.2:
   version "2.0.3"
@@ -2661,9 +2661,9 @@ code-point-at@^1.0.0:
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
 codemirror@^5.46.0:
-  version "5.58.3"
-  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.58.3.tgz#3f0689854ecfbed5d4479a98b96148b2c3b79796"
-  integrity sha512-KBhB+juiyOOgn0AqtRmWyAT3yoElkuvWTI6hsHa9E6GQrl6bk/fdAYcvuqW1/upO9T9rtEtapWdw4XYcNiVDEA==
+  version "5.59.0"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.59.0.tgz#6d8132055459aabf21d04cae5cf5c430e5c57bb9"
+  integrity sha512-UGzSkCacY9z0rSpQ3wnTWRN2nvRE6foDXnJltWW8pazInR/R+3gXHrao4IFQMv/bSBvFBxt8/HPpkpKAS54x5Q==
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -4943,9 +4943,9 @@ immutable@~3.7.4:
   integrity sha1-E7TTyxK++hVIKib+Gy665kAHHks=
 
 import-fresh@^3.1.0:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.2.tgz#fc129c160c5d68235507f4331a6baad186bdbc3e"
-  integrity sha512-cTPNrlvJT6twpYy+YmKUKrTSjWFs3bjYjAhCwm+z4EOCubZxAuO+hHpRN64TqjEaYSHs7tJAE0w1CKMGmsG/lw==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
+  integrity sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==
   dependencies:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
@@ -5962,9 +5962,9 @@ locate-path@^5.0.0:
     p-locate "^4.1.0"
 
 lodash-es@^4.17.11, lodash-es@^4.17.14:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
-  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.20.tgz#29f6332eefc60e849f869c264bc71126ad61e8f7"
+  integrity sha512-JD1COMZsq8maT6mnuz1UMV0jvYD0E0aUsSOdrr1/nAG3dhqQXwRRgeW0cSqH1U43INKcqxaiVIQNOUDld7gRDA==
 
 lodash.deburr@^4.1.0:
   version "4.1.0"
@@ -6147,14 +6147,14 @@ markdown-it-footnote@^3.0.2:
   integrity sha512-JVW6fCmZWjvMdDQSbOT3nnOQtd9iAXmw7hTSh26+v42BnvXeVyGMDBm5b/EZocMed2MbCAHiTX632vY0FyGB8A==
 
 markdown-it-ins@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-ins/-/markdown-it-ins-3.0.0.tgz#b1b56824c78dc66e52b0fc97531b317cd78d79d2"
-  integrity sha512-+vyAdBuMGwmT2yMlAFJSx2VR/0QZ1onQ/Mkkmr4l9tDFOh5sVoAgRbkgbuSsk+sxJ9vaMH/IQ323ydfvQrPO/Q==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-ins/-/markdown-it-ins-3.0.1.tgz#c09356b917cf1dbf73add0b275d67ab8c73d4b4d"
+  integrity sha512-32SSfZqSzqyAmmQ4SHvhxbFqSzPDqsZgMHDwxqPzp+v+t8RsmqsBZRG+RfRQskJko9PfKC2/oxyOs4Yg/CfiRw==
 
 markdown-it-mark@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-mark/-/markdown-it-mark-3.0.0.tgz#27c3e39ef3cc310b2dde5375082c9fa912983cda"
-  integrity sha512-HqMWeKfMMOu4zBO0emmxsoMWmbf2cPKZY1wP6FsTbKmicFfp5y4L3KXAsNeO1rM6NTJVOrNlLKMPjWzriBGspw==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-mark/-/markdown-it-mark-3.0.1.tgz#51257db58787d78aaf46dc13418d99a9f3f0ebd3"
+  integrity sha512-HyxjAu6BRsdt6Xcv6TKVQnkz/E70TdGXEFHRYBGLncRE9lBFwDNLVtFojKxjJWgJ+5XxUwLaHXy+2sGBbDn+4A==
 
 markdown-it-sub@^1.0.0:
   version "1.0.0"
@@ -10170,9 +10170,9 @@ uri-js@^4.2.2:
     punycode "^2.1.0"
 
 urijs@^1.19.0:
-  version "1.19.2"
-  resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.2.tgz#f9be09f00c4c5134b7cb3cf475c1dd394526265a"
-  integrity sha512-s/UIq9ap4JPZ7H1EB5ULo/aOUbWqfDi7FKzMC2Nz+0Si8GiT1rIEaprt8hy3Vy2Ex2aJPpOQv4P4DuOZ+K1c6w==
+  version "1.19.3"
+  resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.3.tgz#f8d601ae3e68c2126ea45894eb18a93cc6afa561"
+  integrity sha512-Kuh0CMvOiSbq6aDlcuhUobc4q/uHx3NsKTAU9s5VxTgK8jlkauPhr6LtoxHqP+W8p/CV+xprjLb9vwN2YQxtXQ==
 
 urix@^0.1.0:
   version "0.1.0"
