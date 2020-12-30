@@ -2,13 +2,11 @@
   "kind": "collectionType",
   "collectionName": "games",
   "info": {
-    "name": "game",
-    "description": ""
+    "name": "game"
   },
   "options": {
     "increments": true,
-    "timestamps": true,
-    "draftAndPublish": true
+    "timestamps": true
   },
   "attributes": {
     "name": {
@@ -21,24 +19,22 @@
       "targetField": "name",
       "required": true
     },
-    "description": {
-      "type": "richtext",
+    "short_description": {
+      "type": "text",
       "required": true,
       "maxLength": 160
     },
-    "short_description": {
-      "type": "string",
-      "required": true,
-      "unique": false
+    "description": {
+      "type": "richtext",
+      "required": true
     },
     "price": {
       "type": "decimal",
-      "default": 0,
-      "required": true
+      "required": true,
+      "default": 0
     },
     "release_date": {
-      "type": "date",
-      "required": false
+      "type": "date"
     },
     "rating": {
       "type": "enumeration",
