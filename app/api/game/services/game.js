@@ -66,15 +66,12 @@
          categories.add(item);
         });
       }
- 
+
       if (supportedOperatingSystems) {
         supportedOperatingSystems.forEach((item) => {
           platforms.add(item);
         });
-       }
-   /*   supportedOperatingSystems?.forEach((item) => {
-       platforms.add(item);
-     }); */
+      }
  
      developers.add(developer);
      publishers.add(publisher);
