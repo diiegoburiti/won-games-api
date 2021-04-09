@@ -2,12 +2,14 @@
   "collectionName": "components_page_sections",
   "info": {
     "name": "section",
-    "icon": "align-justify"
+    "icon": "align-justify",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "highlight": {
       "type": "component",

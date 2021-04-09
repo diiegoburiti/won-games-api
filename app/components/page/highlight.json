@@ -40,7 +40,7 @@
       "type": "string",
       "required": true
     },
-    "alingment": {
+    "alignment": {
       "type": "enumeration",
       "enum": [
         "right",
