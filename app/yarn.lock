@@ -10433,7 +10433,7 @@ strapi-plugin-users-permissions@3.4.0:
     strapi-utils "3.4.0"
     uuid "^3.1.0"
 
-strapi-provider-email-nodemailer@^3.6.2:
+strapi-provider-email-nodemailer@^3.5.3:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/strapi-provider-email-nodemailer/-/strapi-provider-email-nodemailer-3.6.2.tgz#b30302999ff26f2a977b654d142dd63355da1b76"
   integrity sha512-piFO4xxwtjF7s7GCLISf9UJbTLX6Nf6KRpaDACu1HQghUoPI6GjLlNyYYV5+JNg/cyQfEpz6rV9cl25qVoL2tg==
