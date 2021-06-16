@@ -27,7 +27,10 @@ module.exports = {
         error: 'No valid games found!'
       }
     }
+  const total = games.reduce((acc, game) => {
+    return acc + game.price;
+  }, 0);
 
-    return games
+    return {total_in_cents: total * 100, games}
   },
 };
