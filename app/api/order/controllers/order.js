@@ -26,7 +26,7 @@ module.exports = {
 
     try {
       const paymentIntent = await stripe.paymentIntents.create({
-        amount: total * 100,
+        amount: total,
         currency: "usd",
         metadata: { cart: JSON.stringify(cartGamesIds) },
       });
