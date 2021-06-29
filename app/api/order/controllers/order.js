@@ -1,31 +1,13 @@
 "use strict";
 
-/**
- * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
- * to customize this controller
- */
-
 const stripe = require("stripe")(process.env.STRIPE_KEY);
+const { sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   createPaymentIntent: async (ctx) => {
     const { cart } = ctx.request.body;
-
-    let games = [];
-
-    if (cart) {
-      return await Promise.all(
-        cart.map(async (game) => {
-          const validatedGame = await strapi.services.game.findOne({
-            id: game.id,
-          });
-
-          if (validatedGame) {
-            games.push(validatedGame);
-          }
-        })
-      );
-    }
+    const cartGamesIds = await strapi.config.functions.cart.cartGamesIds(cart);
+    const games = await strapi.config.functions.cart.cartItems(cartGamesIds);
 
     if (!games.length) {
       ctx.response.status = 404;
@@ -33,9 +15,8 @@ module.exports = {
         error: "No valid games found!",
       };
     }
-    const total = games.reduce((acc, game) => {
-      return acc + game.price;
-    }, 0);
+
+    const total = await strapi.config.functions.cart.total(games);
 
     if (total === 0) {
       return {
@@ -44,28 +25,46 @@ module.exports = {
     }
 
     try {
-      const paymentIntent = await stripe.paymentIntent.create({
+      const paymentIntent = await stripe.paymentIntents.create({
         amount: total * 100,
         currency: "usd",
-        metadata: { integration_check: "accept_a_payment" },
+        metadata: { cart: JSON.stringify(cartGamesIds) },
       });
+
       return paymentIntent;
-    } catch (error) {
+    } catch (err) {
       return {
-        error: error.raw.message,
+        error: err.raw.message,
       };
     }
   },
 
   create: async (ctx) => {
-    const {cart, paymentIntentId, paymentMethod} = ctx.request.body;
-
-    const token = await strapi.puglins["users-permitions"].services.jwt.getToken(ctx);
+    const { cart, paymentIntentId, paymentMethod } = ctx.request.body;
+    const token = await strapi.plugins[
+      "users-permissions"
+    ].services.jwt.getToken(ctx);
 
     const userId = token.id;
 
-    const userInfo = await strapi.query("user", "users-permissions").findOne({id: userId})
+    const userInfo = await strapi
+      .query("user", "users-permissions")
+      .findOne({ id: userId });
 
-    return {cart, paymentIntentId, paymentMethod, userInfo}
-  }
+    const cartGamesIds = await strapi.config.functions.cart.cartGamesIds(cart);
+    const games = await strapi.config.functions.cart.cartItems(cartGamesIds);
+    const total_in_cents = await strapi.config.functions.cart.total(games);
+
+    const entry = {
+      total_in_cents,
+      payment_intent_id: paymentIntentId,
+      card_brand: null,
+      card_last4: null,
+      user: userInfo,
+      games,
+    };
+
+    const entity = await strapi.services.order.create(entry);
+    return sanitizeEntity(entity, { model: strapi.models.order });
+  },
 };
